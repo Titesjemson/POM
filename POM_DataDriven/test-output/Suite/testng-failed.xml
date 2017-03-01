@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="environment" value="production"/>
+  <parameter name="browser" value="firefox"/>
+  <test name="Firefox Test3(failed)" parallel="tests">
+    <parameter name="environment" value="production"/>
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="main_page.TestEngine">
+        <methods>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="contactCreation" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- main_page.TestEngine -->
+    </classes>
+  </test> <!-- Firefox Test3(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+
+  <test name="Chrome Test1">
+  <parameter name="browser" value="chrome"/> 
+  <parameter name="environment" value="production"/> 
+    <classes>
+      <class name="main_page.TestEngine">
+      <methods>
+	 	 <include name= "leadCreation"/>  
+       </methods> 
+       </class>
+    </classes>
+  </test>    
+  <test name="Chrome Test2">
+  <parameter name="browser" value="chrome"/> 
+   <parameter name="environment" value="production"/> 
+    <classes>
+      <class name="main_page.TestEngine">
+      <methods>
+	  	 <include name="accountCreation"/>
+       </methods> 
+       </class>
+    </classes>
+  </test>   
+ <test name="Chrome Test3">
+  <parameter name="browser" value="chrome"/> 
+  <parameter name="environment" value="production"/> 
+    <classes>
+      <class name="main_page.TestEngine">
+      <methods>
+		 <include name="contactCreation"/> 
+       </methods> 
+       </class>
+    </classes>
+  </test>   
+</suite> 
