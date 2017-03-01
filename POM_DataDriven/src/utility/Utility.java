@@ -33,8 +33,8 @@ public class Utility {
 			File file  = ((TakesScreenshot)screenDriver).getScreenshotAs(OutputType.FILE);
 			File dir = new File(Constant.screenshotPath+testCaseName);
 			dir.mkdirs();
-						
-			String fileName= Constant.screenshotPath+testCaseName+"/"+testCaseName+".jpg";
+			String workspace = 	((new File(".").getAbsolutePath()).replace("\\", "/")).replace(".", "");
+			String fileName= workspace+Constant.screenshotPath+testCaseName+"/"+testCaseName+".jpg";
 			FileUtils.copyFile(file, new File(fileName));
 			
 			String img = logger.addScreenCapture(fileName);
