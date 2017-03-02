@@ -1,5 +1,6 @@
 package mail_extentReport;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,12 +22,14 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+import org.testng.annotations.Test;
+
 import constant.Constant;
 
 public class Mail_report{
 	
 	
-   
+   @Test
 	 public static void send_report() {
 
       Properties props = new Properties();
@@ -43,7 +46,7 @@ public class Mail_report{
       });
 
       try {
-    	
+    	 String workspace = 	((new File(".").getAbsolutePath()).replace("\\", "/")).replace(".", "");
          String reportFileName = "report.html";
          
          DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy", Locale.US);
@@ -60,7 +63,7 @@ public class Mail_report{
          Multipart multipart = new MimeMultipart();
          multipart.addBodyPart(messageBodyPart);
          messageBodyPart = new MimeBodyPart();
-         DataSource source = new FileDataSource(Constant.ReportPath);
+         DataSource source = new FileDataSource(workspace + Constant.ReportPath);
          messageBodyPart.setDataHandler(new DataHandler(source));
          messageBodyPart.setFileName(reportFileName);
          multipart.addBodyPart(messageBodyPart);

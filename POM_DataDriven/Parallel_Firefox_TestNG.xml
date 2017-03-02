@@ -23,7 +23,7 @@
        </methods> 
        </class>
     </classes>
-  </test>    
+  </test>   
  <test name="Firefox Test3">
   <parameter name="browser" value="firefox"/> 
   <parameter name="environment" value="production"/> 
@@ -34,5 +34,16 @@
        </methods> 
        </class>
     </classes>
-  </test>   
+  </test>
+  <test name="Firefox Test4">
+  <parameter name="browser" value="firefox"/> 
+   <parameter name="environment" value="production"/> 
+    <classes>
+      <class name="main_page.TestEngine">
+      <methods>
+	  	 <include name="leadTabVerification"/>
+       </methods> 
+       </class>
+    </classes>
+  </test>
 </suite> 

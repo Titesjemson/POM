@@ -2,19 +2,65 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
   <parameter name="environment" value="production"/>
-  <parameter name="browser" value="chrome"/>
-  <test name="Chrome Test3(failed)" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <test name="Firefox Test4(failed)" parallel="tests">
     <parameter name="environment" value="production"/>
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
       <class name="main_page.TestEngine">
         <methods>
           <include name="getBrowser"/>
-          <include name="contactCreation" invocation-numbers="0"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="leadTabVerification" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- main_page.TestEngine -->
+    </classes>
+  </test> <!-- Firefox Test4(failed) -->
+  <test name="Firefox Test1(failed)" parallel="tests">
+    <parameter name="environment" value="production"/>
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="main_page.TestEngine">
+        <methods>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="leadCreation" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="afterSuite"/>
         </methods>
       </class> <!-- main_page.TestEngine -->
     </classes>
-  </test> <!-- Chrome Test3(failed) -->
+  </test> <!-- Firefox Test1(failed) -->
+  <test name="Firefox Test2(failed)" parallel="tests">
+    <parameter name="environment" value="production"/>
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="main_page.TestEngine">
+        <methods>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="accountCreation" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- main_page.TestEngine -->
+    </classes>
+  </test> <!-- Firefox Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

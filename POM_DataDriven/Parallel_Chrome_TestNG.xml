@@ -33,6 +33,17 @@
 		 <include name="contactCreation"/> 
        </methods> 
        </class>
+     </classes>
+ </test>
+ <test name="Chrome Test4">
+  <parameter name="browser" value="chrome"/> 
+   <parameter name="environment" value="production"/> 
+    <classes>
+      <class name="main_page.TestEngine">
+      <methods>
+	  	 <include name="leadTabVerification"/>
+       </methods> 
+       </class>
     </classes>
-  </test>   
-</suite> 
+  </test>
+ </suite> 

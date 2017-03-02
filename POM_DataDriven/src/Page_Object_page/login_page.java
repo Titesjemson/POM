@@ -23,11 +23,11 @@ public class login_page {
 	 @FindBy(how = How.ID, using = "Login")
 	 public WebElement lnk_login;
 	 
-	 @FindBy(how = How.XPATH, using = "html/body/div[1]/div[1]/div[1]/div/nav/ul/li[4]/a")
+	 @FindBy(how = How.ID, using = "Account_Tab")
 	 public WebElement loginVerify;
 	 
-	 public By by_loginVerify = By.xpath("html/body/div[1]/div[1]/div[1]/div/nav/ul/li[4]/a");
 	 
+	 public By by_loginVerify = By.id("Account_Tab"); 
 	 public login_page(WebDriver driver){ 
 		 
 		    this.driver = driver; 

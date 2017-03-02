@@ -9,8 +9,7 @@ import constant.Constant;
 public class ExtentReportFactory {
 	
 	private static ExtentReports reporter;
-	private static ExtentTest logger;
-	 
+		 
     public static synchronized ExtentReports getReporter() {
            if (reporter == null) {
                   reporter = new ExtentReports(Constant.ReportPath, true, DisplayOrder.NEWEST_FIRST);
@@ -18,10 +17,5 @@ public class ExtentReportFactory {
            return reporter;
     }
 
-    public static synchronized void closeReporter() {
-           reporter.flush();
-           reporter.close();
-    }
-
-}
+ }
 

@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite"   verbose="1" annotations="JDK">
 
-  <suite-files>
+   <suite-files>
         <suite-file path="Parallel_Chrome_TestNG.xml"></suite-file>
         <suite-file path="Parallel_Firefox_TestNG.xml"></suite-file>  
 
-         </suite-files>
-                 <test name="Mail">
+  </suite-files>
+  <test name="Mail">
      <classes>
       <class name="mail_extentReport.Mail_report">
       <methods>

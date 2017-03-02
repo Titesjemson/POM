@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -48,12 +48,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\mst conf4\git\POM_DataDriven\POM_DataDriven\Parallel_Chrome_TestNG.xml</span>
+                    <span>C:\Users\mst conf4\git\POM_DataDriven\POM_DataDriven\Parallel_Firefox_TestNG.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,10 +101,34 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="main_page.TestEngine" hash-for-method="contactCreation(chrome, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.Stri...)">contactCreation(chrome, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.Stri...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="main_page.TestEngine" hash-for-method="accountCreation(firefox, production, public void main_page.TestEngine.accountCreation(java.lang.String,java.lang.Str...)">accountCreation(firefox, production, public void main_page.TestEngine.accountCreation(java.lang.String,java.lang.Str...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="main_page.TestEngine" hash-for-method="leadCreation(firefox, production, public void main_page.TestEngine.leadCreation(java.lang.String,java.lang.String...)">leadCreation(firefox, production, public void main_page.TestEngine.leadCreation(java.lang.String,java.lang.String...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="main_page.TestEngine" hash-for-method="leadTabVerification(firefox, production, public void main_page.TestEngine.leadTabVerification(java.lang.String,java.lang...)">leadTabVerification(firefox, production, public void main_page.TestEngine.leadTabVerification(java.lang.String,java.lang...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="main_page.TestEngine" hash-for-method="contactCreation(firefox, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.Str...)">contactCreation(firefox, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.Str...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -124,13 +148,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="contactCreation(chrome, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.Stri...)">
-                  </a> <!-- contactCreation(chrome, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.Stri...) -->
-                  <span class="method-name">contactCreation</span>
-                  <span class="parameters">(chrome, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.lang.Exception)</span>
-                  <div class="stack-trace">exception.CustomException: The value TestAutomationis not matched with the given value Test
-	at Page_Object_page.contactPage.accountNameVerify(contactPage.java:88)
-	at main_page.TestEngine.contactCreation(TestEngine.java:141)
+                  <a name="accountCreation(firefox, production, public void main_page.TestEngine.accountCreation(java.lang.String,java.lang.Str...)">
+                  </a> <!-- accountCreation(firefox, production, public void main_page.TestEngine.accountCreation(java.lang.String,java.lang.Str...) -->
+                  <span class="method-name">accountCreation</span>
+                  <span class="parameters">(firefox, production, public void main_page.TestEngine.accountCreation(java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">exception.CustomException: The value Edge Communicationsis not matched with the given value Edge Communication
+	at Page_Object_page.accountPage.parentAccountVerify(accountPage.java:82)
+	at main_page.TestEngine.accountCreation(TestEngine.java:119)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
@@ -139,21 +163,155 @@
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="leadCreation(firefox, production, public void main_page.TestEngine.leadCreation(java.lang.String,java.lang.String...)">
+                  </a> <!-- leadCreation(firefox, production, public void main_page.TestEngine.leadCreation(java.lang.String,java.lang.String...) -->
+                  <span class="method-name">leadCreation</span>
+                  <span class="parameters">(firefox, production, public void main_page.TestEngine.leadCreation(java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 15 seconds waiting for presence of element located by: By.id: Account_Tab
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:32:46&apos;
+System info: host: &apos;MSTEMP188SOPHIYA&apos;, ip: &apos;192.168.174.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_102&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 61f0b74c-1241-4713-b9d9-27dc1871e2d1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at common.Common.presenceOfElement(Common.java:25)
+	at main_page.TestEngine.login(TestEngine.java:203)
+	at main_page.TestEngine.leadCreation(TestEngine.java:55)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;Account_Tab&quot;}
+Command duration or timeout: 18.26 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:32:46&apos;
+System info: host: &apos;MSTEMP188SOPHIYA&apos;, ip: &apos;192.168.174.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_102&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 61f0b74c-1241-4713-b9d9-27dc1871e2d1
+*** Element info: {Using=id, value=Account_Tab}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:897)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 23 more
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;Account_Tab&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:32:46&apos;
+System info: host: &apos;MSTEMP188SOPHIYA&apos;, ip: &apos;192.168.174.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_102&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/MSTCON~1/AppData/Local/Temp/anonymous3221253224128480080webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/MSTCON~1/AppData/Local/Temp/anonymous3221253224128480080webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/MSTCON~1/AppData/Local/Temp/anonymous3221253224128480080webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/MSTCON~1/AppData/Local/Temp/anonymous3221253224128480080webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/MSTCON~1/AppData/Local/Temp/anonymous3221253224128480080webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="leadTabVerification(firefox, production, public void main_page.TestEngine.leadTabVerification(java.lang.String,java.lang...)">
+                  </a> <!-- leadTabVerification(firefox, production, public void main_page.TestEngine.leadTabVerification(java.lang.String,java.lang...) -->
+                  <span class="method-name">leadTabVerification</span>
+                  <span class="parameters">(firefox, production, public void main_page.TestEngine.leadTabVerification(java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;Lead_Tab&quot;}
+Command duration or timeout: 10.22 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:32:46&apos;
+System info: host: &apos;MSTEMP188SOPHIYA&apos;, ip: &apos;192.168.174.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_102&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b539a066-6035-4f22-8923-d43a5ee2b30b
+*** Element info: {Using=id, value=Lead_Tab}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at Page_Object_page.lead_page.leadTabVerify(lead_page.java:111)
+	at main_page.TestEngine.leadTabVerification(TestEngine.java:164)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;Lead_Tab&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:32:46&apos;
+System info: host: &apos;MSTEMP188SOPHIYA&apos;, ip: &apos;192.168.174.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_102&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/MSTCON~1/AppData/Local/Temp/anonymous3224956869255332831webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/MSTCON~1/AppData/Local/Temp/anonymous3224956869255332831webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">main_page.TestEngine</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="contactCreation(firefox, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.Str...)">
+                  </a> <!-- contactCreation(firefox, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.Str...) -->
+                  <span class="method-name">contactCreation</span>
+                  <span class="parameters">(firefox, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\mst conf4\git\POM_DataDriven\POM_DataDriven\Parallel_Chrome_TestNG.xml</span>
+            <span class="header-content">C:\Users\mst conf4\git\POM_DataDriven\POM_DataDriven\Parallel_Firefox_TestNG.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
-  &lt;test name=&quot;Chrome Test3&quot;&gt;
+  &lt;test name=&quot;Firefox Test1&quot;&gt;
     &lt;parameter name=&quot;environment&quot; value=&quot;production&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;main_page.TestEngine&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;leadCreation&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- main_page.TestEngine --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Firefox Test1 --&gt;
+  &lt;test name=&quot;Firefox Test2&quot;&gt;
+    &lt;parameter name=&quot;environment&quot; value=&quot;production&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;main_page.TestEngine&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;accountCreation&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- main_page.TestEngine --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Firefox Test2 --&gt;
+  &lt;test name=&quot;Firefox Test3&quot;&gt;
+    &lt;parameter name=&quot;environment&quot; value=&quot;production&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;main_page.TestEngine&quot;&gt;
         &lt;methods&gt;
@@ -161,7 +319,18 @@
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- main_page.TestEngine --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Chrome Test3 --&gt;
+  &lt;/test&gt; &lt;!-- Firefox Test3 --&gt;
+  &lt;test name=&quot;Firefox Test4&quot;&gt;
+    &lt;parameter name=&quot;environment&quot; value=&quot;production&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;main_page.TestEngine&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;leadTabVerification&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- main_page.TestEngine --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Firefox Test4 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,7 +342,16 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Chrome Test3 (1 class)</span>
+                <span class="test-name">Firefox Test1 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Firefox Test2 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Firefox Test3 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Firefox Test4 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,16 +377,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'contactCreation')
 data.setCell(0, 2, 'main_page.TestEngine')
-data.setCell(0, 3, 44289);
+data.setCell(0, 3, 500183);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'accountCreation')
+data.setCell(1, 2, 'main_page.TestEngine')
+data.setCell(1, 3, 248953);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'leadTabVerification')
+data.setCell(2, 2, 'main_page.TestEngine')
+data.setCell(2, 3, 64279);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'leadCreation')
+data.setCell(3, 2, 'main_page.TestEngine')
+data.setCell(3, 3, 30896);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 44 seconds</span>
+              <span class="suite-total-time">Total running time: 14 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -223,15 +413,35 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">12 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">main_page.TestEngine</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">contactCreation</span>
+                <br/>
+                <span class="ignored-method-name">contactCreation</span>
+                <br/>
+                <span class="ignored-method-name">contactCreation</span>
+                <br/>
+                <span class="ignored-method-name">accountCreation</span>
+                <br/>
+                <span class="ignored-method-name">accountCreation</span>
+                <br/>
                 <span class="ignored-method-name">accountCreation</span>
                 <br/>
                 <span class="ignored-method-name">leadCreation</span>
+                <br/>
+                <span class="ignored-method-name">leadCreation</span>
+                <br/>
+                <span class="ignored-method-name">leadCreation</span>
+                <br/>
+                <span class="ignored-method-name">leadTabVerification</span>
+                <br/>
+                <span class="ignored-method-name">leadTabVerification</span>
+                <br/>
+                <span class="ignored-method-name">leadTabVerification</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -245,22 +455,62 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">main_page.TestEngine</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">getBrowser(chrome, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.String,java.lang...)</span>
+                <span class="method-name">getBrowser(firefox, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.String,java.lan...)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getBrowser(firefox, public void main_page.TestEngine.leadTabVerification(java.lang.String,java.lang.String,java...)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getBrowser(firefox, public void main_page.TestEngine.leadCreation(java.lang.String,java.lang.String,java.lang.r...)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">getBrowser(firefox, public void main_page.TestEngine.accountCreation(java.lang.String,java.lang.String,java.lan...)</span>
+                <span class="method-start">1 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">contactCreation(chrome, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.Stri...)</span>
-                <span class="method-start">8799 ms</span>
+                <span class="method-name">leadTabVerification(firefox, production, public void main_page.TestEngine.leadTabVerification(java.lang.String,java.lang...)</span>
+                <span class="method-start">19709 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">accountCreation(firefox, production, public void main_page.TestEngine.accountCreation(java.lang.String,java.lang.Str...)</span>
+                <span class="method-start">38671 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">leadCreation(firefox, production, public void main_page.TestEngine.leadCreation(java.lang.String,java.lang.String...)</span>
+                <span class="method-start">59807 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contactCreation(firefox, production, public void main_page.TestEngine.contactCreation(java.lang.String,java.lang.Str...)</span>
+                <span class="method-start">77971 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=contactCreation status=FAILURE method=TestEngine.contactCreation(java.lang.String, ...)</span>
-                <span class="method-start">53101 ms</span>
+                <span class="method-name">tearDown([TestResult name=leadTabVerification status=FAILURE method=TestEngine.leadTabVerification(java.lang....)</span>
+                <span class="method-start">84000 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=leadCreation status=FAILURE method=TestEngine.leadCreation(java.lang.String, java.l...)</span>
+                <span class="method-start">90716 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=accountCreation status=FAILURE method=TestEngine.accountCreation(java.lang.String, ...)</span>
+                <span class="method-start">287629 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=contactCreation status=SUCCESS method=TestEngine.contactCreation(java.lang.String, ...)</span>
+                <span class="method-start">578158 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">141961 ms</span>
+                <span class="method-start">672140 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -4,7 +4,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +31,13 @@ public class contactPage {
 	
 	@FindBy(how = How.CSS, using = "input[title='Save']")
 	public WebElement save;
+	
+	@FindBy(how = How.CSS, using = "a[title^=Accounts]")
+	public WebElement accountTab;
+	 
+	@FindBy(how = How.CSS, using = ".btn[title='Delete']")
+	public WebElement deleteButton;
+	 
 	
 	public By newButtonVerify = By.cssSelector("input[title='New']");
 	public By accountName_Verification = By.id("con4_ileinner");
@@ -92,17 +101,34 @@ public class contactPage {
 			 throw E;
 		 }
 	 }
+	 public void account_Data_Deletion(String text) throws Exception{
+			try{
+				WebElement table = driver.findElement(By.xpath("html/body/div[1]/div[2]/table/tbody/tr/td[2]/div[3]/div[1]/div/div[2]/table/tbody"));
+				
+				List<WebElement> rows_table = table.findElements(By.tagName("tr"));
+				int rows_count = rows_table.size();
+				String relationValue=null; 
+				
+				for(int row=1; row<rows_count; row++){	
+					WebElement col_table = rows_table.get(row).findElement(By.tagName("th"));
+					
+					relationValue = col_table.getText();
+					if(text.equals(relationValue)){
+						WebElement anchor = col_table.findElement(By.tagName("a"));
+						anchor.click();
+						break;
+						}
+					}
+				}
+				catch(NoSuchElementException c){
+					throw c;
+				}
+			}
+	 public void alertAccept(WebDriver driver) throws Exception{
+
+			Alert confirmationAlert = driver.switchTo().alert();
+			String text = confirmationAlert.getText();
+			System.out.println("Alert text is " + text);
+			confirmationAlert.accept();
+		}
 }
-		     
-			 
-	   
-	  
-     
-         
-  
-    
-     	 
-     
-     
-     	
-     

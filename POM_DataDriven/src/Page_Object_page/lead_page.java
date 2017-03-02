@@ -2,6 +2,7 @@ package Page_Object_page;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -58,6 +59,9 @@ public class lead_page {
 	 @FindBy(how = How.XPATH, using ="html/body/div[1]/div[2]/table/tbody/tr/td[2]/form/div/div[1]/table/tbody/tr/td[2]/input[1]")
 	 public WebElement leadsave;
 	 
+	 @FindBy(how = How.CSS, using = ".btn[title='Delete']")
+	 public  WebElement deleteButton;
+	 
 	 public By leadVerify = By.cssSelector("#lea2_ileinner");
 	
 	
@@ -93,4 +97,32 @@ public class lead_page {
         	throw E;
         }
 	 }
+	 public void alertAccept(WebDriver driver) throws Exception{
+
+			Alert confirmationAlert = driver.switchTo().alert();
+			String text = confirmationAlert.getText();
+			System.out.println("Alert text is " + text);
+			confirmationAlert.accept();
+		}
+	 
+	 public boolean leadTabVerify() throws Exception{
+	 		boolean ele=true;
+	 		try{
+	 		WebElement element =driver.findElement(By.id("Lead_Tab"));
+	 		
+	 		if(element.isDisplayed()){
+	 			throw new CustomException("Lead tab should not be displayed");
+	 			}
+	 		else{
+	 			System.out.println("Leadtab not present");
+	 			ele=true;
+	 		}
+	 	 }
+	 	 catch(Exception ex){
+	 			throw ex;
+	 		}
+	 		return ele;
+	 	 } 
+
+
 }

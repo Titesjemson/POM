@@ -1,0 +1,1 @@
+java -cp bin;Jars/* org.testng.TestNG Parallel_Chrome_TestNG.xml

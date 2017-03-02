@@ -86,6 +86,10 @@ private static ExtentReports reporter = ExtentReportFactory.getReporter();
 			childReport("lead name verified");
 			Common.presenceOfElement(driver,leadpage.leadVerify);
 			leadpage.lead_Verify(ExcelUtility.readExcel(methodName,TC_Name,"LeadName Verify"));
+			childReport("delete button clicked");
+			leadpage.deleteButton.click();
+			childReport("Record deleted");
+			leadpage.alertAccept(driver);
 			
 	 }
    
@@ -139,9 +143,27 @@ private static ExtentReports reporter = ExtentReportFactory.getReporter();
 		 childReport("AccountNameVerified");
 		 Common.presenceOfElement(driver, cont_Page.accountName_Verification);
 		 cont_Page.accountNameVerify(ExcelUtility.readExcel(methodName,TC_Name,"AccountName Verify"));
-		 
+		 childReport("account tab clicked");
+		 cont_Page.accountTab.click();
+		 childReport("account record selected");
+		 cont_Page.account_Data_Deletion(ExcelUtility.readExcel(methodName,TC_Name,"Account Record"));
+		 childReport("delete button clicked");
+		 cont_Page.deleteButton.click();
+		 childReport("Record deleted");
+		 cont_Page.alertAccept(driver);
 	 }
-	 
+	@Test
+	 @Parameters({"browser","environment"})
+	public  void leadTabVerification(String browser,String environment, Method method)throws Exception{
+		    String methodName = method.getName(), TC_Name = "TC004";
+	        parentReport(browser, methodName);
+			login(methodName,environment,browser,TC_Name);
+			
+			lead_page leadpageverify = PageFactory.initElements(driver,lead_page.class);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			leadpageverify.leadTabVerify();
+			
+	 }
 	@AfterMethod
 	@Parameters({"browser"})
 	public void tearDown(ITestResult result,String browser) throws Exception{
@@ -158,8 +180,7 @@ private static ExtentReports reporter = ExtentReportFactory.getReporter();
 	@AfterSuite
 	public void afterSuite(){
 		reporter.flush();
-		reporter.close();
-		//Mail_report.send_report();
+		Mail_report.send_report();
 	}
 	
 	
