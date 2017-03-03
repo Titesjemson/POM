@@ -3,6 +3,7 @@ package com.mst.selenium.excelutility;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.math.BigDecimal;
 
 import java.text.SimpleDateFormat;
@@ -37,12 +38,8 @@ public class ExcelUtility {
 	private static int totalRows=0;
 	private static int totalCols=0;
 	private static String datafilePath =Constant.datafilePath;
-	
-	//To read the data from the concerned cell
-		public static String readExcel(String sheetName,String tcID,String header) throws Exception{
-		Object result = null;
-		try
-		{
+	//To open the input stream to fetch the data from excel
+		public static void openStream() throws IOException{
 			file =    new File(datafilePath);
 		    inputStream = new FileInputStream(file);     
 		    String fileExtensionName = datafilePath.substring(datafilePath.indexOf("."));
@@ -53,7 +50,17 @@ public class ExcelUtility {
 		     else if(fileExtensionName.equals(".xls")){
 		         workbook = new HSSFWorkbook(inputStream);
 		    }  
-		    sheet = workbook.getSheet(sheetName);
+		}
+	//To close the input stream after fetched data
+		public static void closeStream() throws IOException{
+			inputStream.close();
+		}
+	//To read the data from the concerned cell
+		public static String readExcel(String sheetName,String tcID,String header) throws Exception{
+		Object result = null;
+		try
+		{
+			sheet = workbook.getSheet(sheetName);
 		   	totalRows=sheet.getLastRowNum();
 			row=sheet.getRow(0);
 			totalCols=row.getLastCellNum();
@@ -103,7 +110,6 @@ public class ExcelUtility {
 					k=totalRows+1;
 				}
 			}
-			inputStream.close(); 
 		}
 		catch (Exception ex){
 			throw ex;

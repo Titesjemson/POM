@@ -37,10 +37,13 @@ public class ContactPage {
 	@FindBy(how = How.CSS, using = ".btn[title='Delete']")
 	public WebElement deleteButton;
 	 
+	public By by_loginVerify = By.id("Account_Tab");
 	
 	public By newButtonVerify = By.cssSelector("input[title='New']");
 	public By accountName_Verification = By.id("con4_ileinner");
 	
+	@FindBy(how = How.ID, using="con4_ileinner")
+	public WebElement accountName;
 
 	 public ContactPage(WebDriver driver){
 		 this.driver=driver;
@@ -100,29 +103,6 @@ public class ContactPage {
 			 throw E;
 		 }
 	 }
-	 public void account_Data_Deletion(String text) throws Exception{
-			try{
-				WebElement table = driver.findElement(By.xpath("html/body/div[1]/div[2]/table/tbody/tr/td[2]/div[3]/div[1]/div/div[2]/table/tbody"));
-				
-				List<WebElement> rows_table = table.findElements(By.tagName("tr"));
-				int rows_count = rows_table.size();
-				String relationValue=null; 
-				
-				for(int row=1; row<rows_count; row++){	
-					WebElement col_table = rows_table.get(row).findElement(By.tagName("th"));
-					
-					relationValue = col_table.getText();
-					if(text.equals(relationValue)){
-						WebElement anchor = col_table.findElement(By.tagName("a"));
-						anchor.click();
-						break;
-						}
-					}
-				}
-				catch(NoSuchElementException c){
-					throw c;
-				}
-			}
 	 public void alertAccept(WebDriver driver) throws Exception{
 
 			Alert confirmationAlert = driver.switchTo().alert();

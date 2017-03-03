@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite (0)]" parallel="tests">
   <parameter name="environment" value="production"/>
   <parameter name="browser" value="chrome"/>
-  <test name="Chrome Test1(failed)" parallel="tests">
-    <parameter name="environment" value="production"/>
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.mst.selenium.main.page.TestEngine">
-        <methods>
-          <include name="leadCreation" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- com.mst.selenium.main.page.TestEngine -->
-    </classes>
-  </test> <!-- Chrome Test1(failed) -->
   <test name="Chrome Test2(failed)" parallel="tests">
     <parameter name="environment" value="production"/>
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.mst.selenium.main.page.TestEngine">
         <methods>
+          <include name="beforeSuite"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
           <include name="getBrowser"/>
           <include name="getBrowser"/>
           <include name="afterSuite"/>
@@ -35,4 +24,4 @@
       </class> <!-- com.mst.selenium.main.page.TestEngine -->
     </classes>
   </test> <!-- Chrome Test2(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+</suite> <!-- Failed suite [Suite (0)] -->

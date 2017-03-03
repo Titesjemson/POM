@@ -9,7 +9,7 @@
   </suite-files>
   <test name="Mail">
      <classes>
-      <class name="mail_extentReport.Mail_report">
+      <class name="com.mst.selenium.mail.Mail_report">
       <methods>
 	 	 <include name= "send_report"/>  
        </methods> 

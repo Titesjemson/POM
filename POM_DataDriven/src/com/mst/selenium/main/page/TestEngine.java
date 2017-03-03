@@ -1,6 +1,7 @@
 package com.mst.selenium.main.page;
 
 
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
@@ -11,23 +12,20 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mst.selenium.browser.BrowserFactory;
 import com.mst.selenium.common.Common;
 import com.mst.selenium.excelutility.ExcelUtility;
-import com.mst.selenium.extentreport.ExtentReportFactory;
 import com.mst.selenium.extentreport.ReportGenerator;
 import com.mst.selenium.mail.Mail_report;
 import com.mst.selenium.page.AccountPage;
 import com.mst.selenium.page.ContactPage;
 import com.mst.selenium.page.Lead_page;
 import com.mst.selenium.page.Login_page;
-import com.mst.selenium.utility.Utility;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+
 
 
 public class TestEngine {
@@ -35,7 +33,10 @@ public class TestEngine {
 WebDriver driver;
 
 ReportGenerator reporter;
-	
+	@BeforeSuite
+	public void beforeSuite() throws IOException{
+		ExcelUtility.openStream();
+	}
 	@BeforeMethod
 	@Parameters({"browser"})
 	public void getBrowser(String browser,Method method) throws Exception{
@@ -115,14 +116,13 @@ ReportGenerator reporter;
 		 reporter.childReport("AccountNameVerified");
 		 Common.presenceOfElement(driver, contPage.accountName_Verification);
 		 contPage.accountNameVerify(ExcelUtility.readExcel(methodName,TC_Name,"AccountName Verify"));
-		 reporter.childReport("account tab clicked");
-		 contPage.accountTab.click();
-		 reporter.childReport("account record selected");
-		 contPage.account_Data_Deletion(ExcelUtility.readExcel(methodName,TC_Name,"Account Record"));
+		 reporter.childReport("account clicked");
+		 contPage.accountName.click();
 		 reporter.childReport("delete button clicked");
 		 contPage.deleteButton.click();
 		 reporter.childReport("Record deleted");
 		 contPage.alertAccept(driver);
+		 Common.presenceOfElement(driver, contPage.by_loginVerify); 
 	 }
 	@Test
 	 @Parameters({"browser","environment"})
@@ -150,8 +150,9 @@ ReportGenerator reporter;
 	}
 	
 	@AfterSuite
-	public void afterSuite(){
+	public void afterSuite() throws IOException{
 		reporter.flush();
+		ExcelUtility.closeStream();
 		//Mail_report.send_report();
 	}
 	

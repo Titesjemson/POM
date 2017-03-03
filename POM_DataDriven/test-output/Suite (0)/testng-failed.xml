@@ -7,80 +7,21 @@
     <parameter name="environment" value="production"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="main_page.TestEngine">
+      <class name="com.mst.selenium.main.page.TestEngine">
         <methods>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="accountCreation" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
           <include name="afterSuite"/>
+          <include name="accountCreation" invocation-numbers="0"/>
         </methods>
-      </class> <!-- main_page.TestEngine -->
+      </class> <!-- com.mst.selenium.main.page.TestEngine -->
     </classes>
   </test> <!-- Chrome Test2(failed) -->
-  <test name="Chrome Test4(failed)" parallel="tests">
-    <parameter name="environment" value="production"/>
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="main_page.TestEngine">
-        <methods>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="leadTabVerification" invocation-numbers="0"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- main_page.TestEngine -->
-    </classes>
-  </test> <!-- Chrome Test4(failed) -->
-  <test name="Chrome Test1(failed)" parallel="tests">
-    <parameter name="environment" value="production"/>
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="main_page.TestEngine">
-        <methods>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="leadCreation" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- main_page.TestEngine -->
-    </classes>
-  </test> <!-- Chrome Test1(failed) -->
-  <test name="Chrome Test3(failed)" parallel="tests">
-    <parameter name="environment" value="production"/>
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="main_page.TestEngine">
-        <methods>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="contactCreation" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- main_page.TestEngine -->
-    </classes>
-  </test> <!-- Chrome Test3(failed) -->
 </suite> <!-- Failed suite [Suite (0)] -->
