@@ -2,65 +2,37 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
   <parameter name="environment" value="production"/>
-  <parameter name="browser" value="firefox"/>
-  <test name="Firefox Test4(failed)" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="Chrome Test1(failed)" parallel="tests">
     <parameter name="environment" value="production"/>
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="main_page.TestEngine">
+      <class name="com.mst.selenium.main.page.TestEngine">
         <methods>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="leadTabVerification" invocation-numbers="0"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- main_page.TestEngine -->
-    </classes>
-  </test> <!-- Firefox Test4(failed) -->
-  <test name="Firefox Test1(failed)" parallel="tests">
-    <parameter name="environment" value="production"/>
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="main_page.TestEngine">
-        <methods>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
           <include name="leadCreation" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
           <include name="afterSuite"/>
         </methods>
-      </class> <!-- main_page.TestEngine -->
+      </class> <!-- com.mst.selenium.main.page.TestEngine -->
     </classes>
-  </test> <!-- Firefox Test1(failed) -->
-  <test name="Firefox Test2(failed)" parallel="tests">
+  </test> <!-- Chrome Test1(failed) -->
+  <test name="Chrome Test2(failed)" parallel="tests">
     <parameter name="environment" value="production"/>
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="main_page.TestEngine">
+      <class name="com.mst.selenium.main.page.TestEngine">
         <methods>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="accountCreation" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
           <include name="afterSuite"/>
+          <include name="accountCreation" invocation-numbers="0"/>
         </methods>
-      </class> <!-- main_page.TestEngine -->
+      </class> <!-- com.mst.selenium.main.page.TestEngine -->
     </classes>
-  </test> <!-- Firefox Test2(failed) -->
+  </test> <!-- Chrome Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

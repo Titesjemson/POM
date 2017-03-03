@@ -3,24 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite (1)]" parallel="tests">
   <parameter name="environment" value="production"/>
   <parameter name="browser" value="firefox"/>
-  <test name="Firefox Test1(failed)" parallel="tests">
-    <parameter name="environment" value="production"/>
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="main_page.TestEngine">
-        <methods>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="leadCreation" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- main_page.TestEngine -->
-    </classes>
-  </test> <!-- Firefox Test1(failed) -->
   <test name="Firefox Test2(failed)" parallel="tests">
     <parameter name="environment" value="production"/>
     <parameter name="browser" value="firefox"/>
@@ -30,7 +12,9 @@
           <include name="getBrowser"/>
           <include name="getBrowser"/>
           <include name="getBrowser"/>
+          <include name="getBrowser"/>
           <include name="accountCreation" invocation-numbers="0"/>
+          <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="tearDown"/>

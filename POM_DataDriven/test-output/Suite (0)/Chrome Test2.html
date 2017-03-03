@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 02 17:07:39 IST 2017</td>
+<td>Started on:</td><td>Thu Mar 02 16:47:58 MST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>75 seconds (75397 ms)</td>
+<tr><td>Total time:</td><td>8 seconds (8488 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,17 +76,43 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='main_page.TestEngine.accountCreation()'><b>accountCreation</b><br>Test class: main_page.TestEngine<br>Parameters: chrome, production, public void main_page.TestEngine.accountCreation(java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.lang.Exception</td>
-<td><div><pre>exception.CustomException: The value Edge Communicationsis not matched with the given value Edge Communication
-	at Page_Object_page.accountPage.parentAccountVerify(accountPage.java:82)
-	at main_page.TestEngine.accountCreation(TestEngine.java:119)
+<td><div><pre>java.io.IOException: Stream Closed
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at java.io.PushbackInputStream.read(Unknown Source)
+	at java.util.zip.ZipInputStream.readFully(Unknown Source)
+	at java.util.zip.ZipInputStream.readLOC(Unknown Source)
+	at java.util.zip.ZipInputStream.getNextEntry(Unknown Source)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:51)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:83)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:267)
+	at org.apache.poi.util.PackageHelper.open(PackageHelper.java:39)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:204)
+	at excelutility.ExcelUtility.readExcel(ExcelUtility.java:51)
+	at Page_Object_page.login_page.performLoginAction(login_page.java:45)
+	at main_page.TestEngine.accountCreation(TestEngine.java:101)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace374653417", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace374653417'><pre>exception.CustomException: The value Edge Communicationsis not matched with the given value Edge Communication
-	at Page_Object_page.accountPage.parentAccountVerify(accountPage.java:82)
-	at main_page.TestEngine.accountCreation(TestEngine.java:119)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1869442000", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1869442000'><pre>java.io.IOException: Stream Closed
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at java.io.PushbackInputStream.read(Unknown Source)
+	at java.util.zip.ZipInputStream.readFully(Unknown Source)
+	at java.util.zip.ZipInputStream.readLOC(Unknown Source)
+	at java.util.zip.ZipInputStream.getNextEntry(Unknown Source)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:51)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:83)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:267)
+	at org.apache.poi.util.PackageHelper.open(PackageHelper.java:39)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:204)
+	at excelutility.ExcelUtility.readExcel(ExcelUtility.java:51)
+	at Page_Object_page.login_page.performLoginAction(login_page.java:45)
+	at main_page.TestEngine.accountCreation(TestEngine.java:101)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -108,8 +134,8 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>65</td>
-<td>main_page.TestEngine@6b57696f</td></tr>
+<td>0</td>
+<td>main_page.TestEngine@5bcab519</td></tr>
 </table><p>
 </body>
 </html>

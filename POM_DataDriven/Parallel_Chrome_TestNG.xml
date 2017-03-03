@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests">
 
- <test name="Chrome Test1">
+  <test name="Chrome Test1">
   <parameter name="browser" value="chrome"/> 
   <parameter name="environment" value="production"/> 
     <classes>
-      <class name="main_page.TestEngine">
+      <class name="com.mst.selenium.main.page.TestEngine">
       <methods>
 	 	 <include name= "leadCreation"/>  
        </methods> 
@@ -17,18 +17,18 @@
   <parameter name="browser" value="chrome"/> 
    <parameter name="environment" value="production"/> 
     <classes>
-      <class name="main_page.TestEngine">
+      <class name="com.mst.selenium.main.page.TestEngine">
       <methods>
 	  	 <include name="accountCreation"/>
        </methods> 
        </class>
     </classes>
   </test>
- <test name="Chrome Test3">
+<!--  <test name="Chrome Test3">
   <parameter name="browser" value="chrome"/> 
   <parameter name="environment" value="production"/> 
     <classes>
-      <class name="main_page.TestEngine">
+      <class name="com.mst.selenium.main.page.TestEngine">
       <methods>
 		 <include name="contactCreation"/> 
        </methods> 
@@ -39,11 +39,11 @@
   <parameter name="browser" value="chrome"/> 
    <parameter name="environment" value="production"/> 
     <classes>
-      <class name="main_page.TestEngine">
+      <class name="com.mst.selenium.main.page.TestEngine">
       <methods>
 	  	 <include name="leadTabVerification"/>
        </methods> 
        </class>
     </classes>
   </test>
- </suite> 
+--> </suite> 
