@@ -3,30 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
   <parameter name="environment" value="production"/>
   <parameter name="browser" value="chrome"/>
-  <test name="Chrome Test1(failed)" parallel="tests">
-    <parameter name="environment" value="production"/>
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.mst.selenium.main.page.TestEngine">
-        <methods>
-          <include name="leadCreation" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="getBrowser"/>
-          <include name="getBrowser"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- com.mst.selenium.main.page.TestEngine -->
-    </classes>
-  </test> <!-- Chrome Test1(failed) -->
   <test name="Chrome Test2(failed)" parallel="tests">
     <parameter name="environment" value="production"/>
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.mst.selenium.main.page.TestEngine">
         <methods>
+          <include name="beforeSuite"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="getBrowser"/>
+          <include name="getBrowser"/>
           <include name="getBrowser"/>
           <include name="getBrowser"/>
           <include name="afterSuite"/>

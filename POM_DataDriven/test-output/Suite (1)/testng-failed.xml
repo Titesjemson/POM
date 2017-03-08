@@ -7,21 +7,21 @@
     <parameter name="environment" value="production"/>
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.mst.selenium.main.page.TestEngine">
+      <class name="com.mst.selenium.main.test.TestEngine">
         <methods>
-          <include name="beforeSuite"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
+          <include name="getBrowser"/>
           <include name="tearDown"/>
           <include name="getBrowser"/>
+          <include name="tearDown"/>
           <include name="getBrowser"/>
+          <include name="tearDown"/>
           <include name="getBrowser"/>
-          <include name="getBrowser"/>
+          <include name="tearDown"/>
           <include name="afterSuite"/>
+          <include name="beforeSuite"/>
           <include name="accountCreation" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.mst.selenium.main.page.TestEngine -->
+      </class> <!-- com.mst.selenium.main.test.TestEngine -->
     </classes>
   </test> <!-- Firefox Test2(failed) -->
 </suite> <!-- Failed suite [Suite (1)] -->

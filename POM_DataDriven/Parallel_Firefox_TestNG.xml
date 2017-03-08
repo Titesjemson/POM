@@ -6,7 +6,7 @@
   <parameter name="browser" value="firefox"/> 
   <parameter name="environment" value="production"/> 
     <classes>
-      <class name="com.mst.selenium.main.page.TestEngine">
+      <class name="com.mst.selenium.main.test.TestEngine">
       <methods>
 	 	 <include name="leadCreation"/>  
        </methods> 
@@ -17,7 +17,7 @@
   <parameter name="browser" value="firefox"/> 
    <parameter name="environment" value="production"/> 
     <classes>
-      <class name="com.mst.selenium.main.page.TestEngine">
+      <class name="com.mst.selenium.main.test.TestEngine">
       <methods>
 	  	 <include name="accountCreation"/>
        </methods> 
@@ -28,7 +28,7 @@
   <parameter name="browser" value="firefox"/> 
   <parameter name="environment" value="production"/> 
     <classes>
-      <class name="com.mst.selenium.main.page.TestEngine">
+      <class name="com.mst.selenium.main.test.TestEngine">
       <methods>
 		 <include name="contactCreation"/> 
        </methods> 
@@ -39,7 +39,7 @@
   <parameter name="browser" value="firefox"/> 
    <parameter name="environment" value="production"/> 
     <classes>
-      <class name="com.mst.selenium.main.page.TestEngine">
+      <class name="com.mst.selenium.main.test.TestEngine">
       <methods>
 	  	 <include name="leadTabVerification"/>
        </methods> 
